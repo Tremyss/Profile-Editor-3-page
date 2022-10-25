@@ -23,77 +23,146 @@
   <body>
     <div id="root">
       <form class="form">
-        <div id="leftSide">
-          <div id="nameContainer">
-            <input
-              type="text"
-              class="form-input"
-              name="first-name"
-              placeholder="first name"
-              required
-            />
-            <input
-              type="text"
-              class="form-input"
-              name="surname"
-              placeholder="surname"
-              required
-            />
+        <!-- ! BASIC INFO -->
+        <div id="nameContainer" class="page-container">
+          <div id="nameLabelSubContainer" class="label-container">
+            <label id="nameLabel" class="main-label"
+              >Enter basic information</label
+            >
+            <p id="nameSubLabel" class="sub-label">
+              Please fill out this form.
+            </p>
           </div>
-          <div id="addressContainer">
-            <label id="addressLabel">Address</label>
-            <input
-              type="text"
-              class="form-input"
-              name="country"
-              placeholder="country"
-              required
-            />
-            <input
-              type="text"
-              class="form-input"
-              name="zip"
-              placeholder="zip"
-              required
-            />
-            <input
-              type="text"
-              class="form-input"
-              name="city"
-              placeholder="city"
-              required
-            />
-            <input
-              type="text"
-              class="form-input"
-              name="street"
-              placeholder="street"
-              required
-            />
-            <input
-              type="text"
-              class="form-input"
-              name="house-number"
-              placeholder="house number"
-              required
-            />
+          <div id="nameInputSubContainer" class="input-container">
+            <div class="input-mini">
+              <input
+                type="text"
+                class="form-input"
+                name="first-name"
+                required
+              />
+              <label for="name" class="input-label">
+                <span class="content-name">First name</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="surname" required />
+              <label for="name" class="input-label">
+                <span class="content-name">Surname</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="email" required />
+              <label for="name" class="input-label">
+                <span class="content-name">E-mail</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="phone" required />
+              <label for="name" class="input-label">
+                <span class="content-name">Phone (optional)</span>
+              </label>
+            </div>
+          </div>
+          <div class="button-container basic-btn-container">
+            <button class="btn delete-btn" id="basic-delete-btn">Delete</button>
+            <button class="btn save-btn" id="basic-save-btn">
+              Save & Continue
+            </button>
           </div>
         </div>
-        <div id="rightSide">
-          <input
-            type="text"
-            class="form-input"
-            name="profile-img"
-            placeholder="profile image"
-            required
-          />
-          <input
-            type="text"
-            class="form-input"
-            name="introduction"
-            placeholder="introduction"
-            required
-          />
+        <!-- ! SHIPPING INFO -->
+        <div id="addressContainer" class="page-container">
+          <div id="addressLabelSubContainer" class="label-container">
+            <label id="addressLabel" class="main-label"
+              >Enter shipping information</label
+            >
+            <p id="addressSubLabel" class="sub-label">
+              Please fill out this form.
+            </p>
+          </div>
+          <div id="addressInputSubContainer" class="input-container">
+            <div class="input-mini">
+              <input type="text" class="form-input" name="country" required />
+              <label for="name" class="input-label">
+                <span class="content-name">Country</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="zip" required />
+              <label for="name" class="input-label">
+                <span class="content-name">Zip</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="city" required />
+              <label for="name" class="input-label">
+                <span class="content-name">City</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input type="text" class="form-input" name="street" required />
+              <label for="name" class="input-label">
+                <span class="content-name">Street</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input
+                type="text"
+                class="form-input"
+                name="house-number"
+                required
+              />
+              <label for="name" class="input-label">
+                <span class="content-name">House number</span>
+              </label>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="btn back-btn">Go back</button>
+            <button class="btn delete-btn">Delete</button>
+            <button class="btn save-btn">Save & Continue</button>
+          </div>
+        </div>
+        <!-- ! CUSTOM INFO -->
+        <div id="customContainer" class="page-container">
+          <div id="customLabelSubContainer" class="label-container">
+            <label id="customLabel" class="main-label"
+              >Customize your profile</label
+            >
+            <p id="customSubLabel" class="sub-label">
+              Please fill out this form.
+            </p>
+          </div>
+          <div id="customInputSubContainer" class="input-container">
+            <div class="input-mini">
+              <input
+                type="text"
+                class="form-input"
+                name="profile-img"
+                required
+              />
+              <label for="name" class="input-label">
+                <span class="content-name">Profile image</span>
+              </label>
+            </div>
+            <div class="input-mini">
+              <input
+                type="text"
+                class="form-input"
+                name="introduction"
+                required
+              />
+              <label for="name" class="input-label">
+                <span class="content-name">Introduction</span>
+              </label>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="btn back-btn">Go back</button>
+            <button class="btn delete-btn">Delete</button>
+            <button class="btn save-btn">Save changes</button>
+          </div>
         </div>
       </form>
     </div>
