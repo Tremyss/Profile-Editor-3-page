@@ -38,6 +38,7 @@
               <input
                 type="text"
                 class="form-input"
+                id="firstName"
                 name="first-name"
                 required
               />
@@ -66,7 +67,7 @@
           </div>
           <div class="button-container basic-btn-container">
             <button class="btn delete-btn" id="basic-delete-btn">Delete</button>
-            <button class="btn save-btn" id="basic-save-btn">
+            <button type="submit" class="btn save-btn" id="basic-save-btn">
               Save & Continue
             </button>
           </div>
@@ -75,7 +76,7 @@
         <div id="addressContainer" class="page-container">
           <div id="addressLabelSubContainer" class="label-container">
             <label id="addressLabel" class="main-label"
-              >Enter shipping information</label
+              >Enter shipping address</label
             >
             <p id="addressSubLabel" class="sub-label">
               Please fill out this form.
@@ -166,5 +167,25 @@
         </div>
       </form>
     </div>
+
+    <!-- ! Test section -->
+    <form id="testForm" action="">
+      <input
+        type="text"
+        class="test-input form-input"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <input
+        type="text"
+        class="test-input form-input"
+        name="age"
+        placeholder="Age"
+        required
+      />
+      <button type="submit" class="btn save-btn">Submit</button>
+    </form>
+    <!-- ? end of test -->
   </body>
 </html>

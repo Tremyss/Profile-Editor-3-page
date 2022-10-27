@@ -1,5 +1,4 @@
-/* --- start of CSS reset --- */
-
+/* ! --- start of CSS reset --- */
 * {
 	margin: 0;
 	padding: 0;
@@ -9,72 +8,76 @@
 	/* background: transparent; */
 	font-family: inherit;
 }
-
 a {
 	text-decoration: none;
 }
-
 a img {
 	border: none;
 }
-
 button,
 a {
 	cursor: pointer;
 	color: inherit;
 }
-
 textarea {
 	resize: none;
 }
-
 button,
 textarea,
 select {
 	appearance: none !important;
 	border-radius: 0;
 }
-
 /* --- end of CSS reset --- */
 
-body {
-	
+/* ! GENERAL POSITIONING AND STYLING */
+
+body {	
 	width: 100%;
 	height: 100%;
 }
 
-#root {
-	
-	background-color: rgb(35, 115, 168);
+#root {	
+	/* background-color: rgb(35, 115, 168); */
+	background-color: #377fd3;
+	background-image: url(img/1600_Sky.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	width: 100vw;	
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 }
 
-.form {
-	
+.form {	
 	font-family: 'Asap', sans-serif;
 	font-weight: 500;
 	width: 25rem;	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	gap: 1rem;
+	justify-content: center;	
+	gap: 5rem;
+}
+
+#nameContainer {
+	margin-top: 5rem;	
+}
+
+#customContainer {
+	margin-bottom: 5rem;
 }
 
 .page-container {
-	background-color: rgb(220, 247, 255);	
+	background-color: rgb(246, 253, 255);	
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 	height: 35rem;
-	width: 25rem;
-	gap: 0.5rem;
-	padding: 0.5rem;
+	width: 23rem;	
+	padding: 1rem;	
 	border-radius: 0.5rem;
 }
 
@@ -103,11 +106,11 @@ body {
 	/* border: 2px solid hotpink; */
 	margin: 0.2rem 0.5rem;
 	/* height: 30rem; */
-	width: 20.5rem;
+	width: 18.5rem;
 }
 
 .form-input {
-	background-color: rgb(220, 247, 255);	
+	background-color: rgb(246, 253, 255);	
 	font-size: 1.2rem;
 	margin: 0.2rem 0;
 	height: 2rem;	
@@ -157,7 +160,7 @@ body {
 	height: 100%;
 	width: 100%;
 	/* border-bottom: 0.2rem solid #5fa8d3; */
-	border-bottom: 0.2rem solid rgb(56, 139, 194);
+	border-bottom: 0.2rem solid #377fd3;
 	
 	left: 0;
 	bottom: -0.1rem;
@@ -180,7 +183,8 @@ body {
 .input-mini input:valid + .input-label .content-name {
 	transform: translateY(-180%);
 	font-size: 1rem;
-	color: rgb(56, 139, 194);
+	/* color: rgb(56, 139, 194); */
+	color: #377fd3;
 }
 
 /* ? move the animation line from the left */
@@ -194,7 +198,8 @@ body {
 .button-container {	
 	position: absolute;
 	bottom: 1rem;
-	width: 82%;
+	width: 100%;
+	padding: 0 1.5rem;
 	height: 3rem;
 	display: flex;
 	flex-direction: row;
@@ -203,11 +208,11 @@ body {
 }
 
 .basic-btn-container {
-	padding-left: 6rem;
+	padding-left: 7rem;
 }
 
 .btn {
-	background-color: rgb(56, 139, 194);
+	background-color: #377fd3;
 	color: rgb(246, 253, 255);
 	padding: 0.5rem;
 	height: 3rem;
@@ -216,6 +221,23 @@ body {
 	border-radius: 0.5rem;
 }
 
+/* ! Test Section */
+
+#testForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;		
+	height: 10rem;
+}
+
+.test-input {
+	background-color: #555;
+	color: #377fd3;
+}
 
 
 
+.test-input::placeholder {
+	color: hotpink;
+}
