@@ -22,7 +22,7 @@
   </head>
   <body>
     <div id="root">
-      <form class="form">
+      <form class="form" id="nameForm">
         <!-- ! BASIC INFO -->
         <div id="nameContainer" class="page-container">
           <div id="nameLabelSubContainer" class="label-container">
@@ -53,13 +53,13 @@
               </label>
             </div>
             <div class="input-mini">
-              <input type="text" class="form-input" name="email" required />
+              <input type="email" class="form-input" name="email" required />
               <label for="name" class="input-label">
                 <span class="content-name">E-mail</span>
               </label>
             </div>
             <div class="input-mini">
-              <input type="text" class="form-input" name="phone" required />
+              <input type="text" class="form-input" name="phone" />
               <label for="name" class="input-label">
                 <span class="content-name">Phone (optional)</span>
               </label>
@@ -67,12 +67,19 @@
           </div>
           <div class="button-container basic-btn-container">
             <button class="btn delete-btn" id="basic-delete-btn">Delete</button>
-            <button type="submit" class="btn save-btn" id="basic-save-btn">
+            <button
+              onclick="window.location.href='#addressContainer';"
+              type="submit"
+              class="btn save-btn"
+              id="basic-save-btn"
+            >
               Save & Continue
             </button>
           </div>
         </div>
-        <!-- ! SHIPPING INFO -->
+      </form>
+      <!-- ! SHIPPING INFO -->
+      <form class="form" id="addressForm">
         <div id="addressContainer" class="page-container">
           <div id="addressLabelSubContainer" class="label-container">
             <label id="addressLabel" class="main-label"
@@ -120,12 +127,24 @@
             </div>
           </div>
           <div class="button-container">
-            <button class="btn back-btn">Go back</button>
+            <button
+              onclick="window.location.href='#nameContainer';"
+              class="btn back-btn"
+            >
+              Go back
+            </button>
             <button class="btn delete-btn">Delete</button>
-            <button class="btn save-btn">Save & Continue</button>
+            <button
+              onclick="window.location.href='#customContainer';"
+              class="btn save-btn"
+            >
+              Save & Continue
+            </button>
           </div>
         </div>
-        <!-- ! CUSTOM INFO -->
+      </form>
+      <!-- ! CUSTOM INFO -->
+      <form class="form" id="customForm">
         <div id="customContainer" class="page-container">
           <div id="customLabelSubContainer" class="label-container">
             <label id="customLabel" class="main-label"
@@ -160,7 +179,12 @@
             </div>
           </div>
           <div class="button-container">
-            <button class="btn back-btn">Go back</button>
+            <button
+              onclick="window.location.href='#addressContainer';"
+              class="btn back-btn"
+            >
+              Go back
+            </button>
             <button class="btn delete-btn">Delete</button>
             <button class="btn save-btn">Save changes</button>
           </div>
@@ -186,6 +210,9 @@
       />
       <button type="submit" class="btn save-btn">Submit</button>
     </form>
+    <div>
+      <h2>Upload Image</h2>
+    </div>
     <!-- ? end of test -->
   </body>
 </html>

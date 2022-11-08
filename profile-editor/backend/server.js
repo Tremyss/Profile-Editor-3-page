@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 
+app.use(express.json());
+// * ezt a 7. sort kellett +-ban beletenni
 app.use(fileUpload());
 
 app.get("/", (req, res) =>

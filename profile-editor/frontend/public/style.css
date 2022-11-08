@@ -45,8 +45,10 @@ body {
 	background-size: 100%;
 	width: 100vw;	
 	display: flex;
-	align-items: flex-start;
+	flex-direction: column;
+	align-items: center;	
 	justify-content: center;
+	gap: 5rem;
 }
 
 .form {	
@@ -54,10 +56,7 @@ body {
 	font-weight: 500;
 	width: 25rem;	
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;	
-	gap: 5rem;
 }
 
 #nameContainer {
@@ -75,7 +74,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	height: 35rem;
+	height: 37rem;
 	width: 23rem;	
 	padding: 1rem;	
 	border-radius: 0.5rem;
@@ -186,7 +185,7 @@ body {
 	/* color: rgb(56, 139, 194); */
 	color: #377fd3;
 }
-
+/* * not selector, input required lecserélése*/
 /* ? move the animation line from the left */
 .input-mini input:focus + .input-label::after, 
 .input-mini input:valid + .input-label::after {
