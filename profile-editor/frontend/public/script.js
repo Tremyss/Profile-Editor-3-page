@@ -21,9 +21,9 @@ FormElement.addEventListener('submit', (event) => {
     event.preventDefault();
 }); */
 
-window.onload=function(){
+window.onload = function () {
     const FormE = document.querySelector("#testForm");
-    
+
     FormE.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -41,7 +41,7 @@ window.onload=function(){
         console.log(testData);
 
         fetch('http://127.0.0.1:9000', {
-        // * a fetch-be kell a http vagy https!!!
+            // * a fetch-be kell a http vagy https!!!
             method: 'POST',
             // ? default method is GET, if you just getting data you don't need to specify this.
             headers: {
@@ -51,7 +51,15 @@ window.onload=function(){
             // ? the actual data we want to send:
             body: JSON.stringify(testData)
         }).then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                const jsonData = JSON.stringify(data);
+                const fs = require('fs');
+                fs.writeFile('profile.json', jsonData, (err) => {
+                    if (err) throw err;
+                    console.log('JSON data saved to file');
+                });
+            })
             .catch(error => console.log(error))
     });
 }
