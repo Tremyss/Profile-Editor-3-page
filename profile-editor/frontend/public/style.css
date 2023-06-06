@@ -1,242 +1,257 @@
 /* ! --- start of CSS reset --- */
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: none;
-	box-sizing: border-box;
-	/* background: transparent; */
-	font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  /* background: transparent; */
+  font-family: inherit;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 a img {
-	border: none;
+  border: none;
 }
 button,
 a {
-	cursor: pointer;
-	color: inherit;
+  cursor: pointer;
+  color: inherit;
 }
 textarea {
-	resize: none;
+  resize: none;
 }
 button,
 textarea,
 select {
-	appearance: none !important;
-	border-radius: 0;
+  appearance: none !important;
+  border-radius: 0;
 }
 /* --- end of CSS reset --- */
 
 /* ! GENERAL POSITIONING AND STYLING */
 
-body {	
-	width: 100%;
-	height: 100%;
+body {
+  width: 100%;
+  height: 100%;
 }
 
-#root {	
-	/* background-color: rgb(35, 115, 168); */
-	background-color: #377fd3;
-	background-image: url(img/1600_Sky.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	width: 100vw;	
-	display: flex;
-	flex-direction: column;
-	align-items: center;	
-	justify-content: center;
-	gap: 5rem;
+#root {
+  /* background-color: rgb(35, 115, 168); */
+  background-color: #377fd3;
+  background-image: url(img/1600_Sky.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
 }
 
-.form {	
-	font-family: 'Asap', sans-serif;
-	font-weight: 500;
-	width: 25rem;	
-	display: flex;
-	justify-content: center;	
+.form {
+  font-family: "Asap", sans-serif;
+  font-weight: 500;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
 }
 
 #nameContainer {
-	margin-top: 5rem;	
+  margin-top: 5rem;
 }
 
 #customContainer {
-	margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 .page-container {
-	background-color: rgb(246, 253, 255);	
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	height: 37rem;
-	width: 23rem;	
-	padding: 1rem;	
-	border-radius: 0.5rem;
+  background-color: rgb(246, 253, 255);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 37rem;
+  width: 23rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .label-container {
-	/* background-color: bisque; */
-	margin: 0.2rem 0.5rem;
-	width: 20.5rem;	
-	display: flex;
-	flex-direction: column;
-	gap: 0.3rem;
+  /* background-color: bisque; */
+  margin: 0.2rem 0.5rem;
+  width: 20.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .main-label {
-	/* background-color: goldenrod; */
-	width: 100%;
-	font-size: 1.70rem;
-	font-weight: 700;
-	color: #222;	
+  /* background-color: goldenrod; */
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #222;
 }
 
 .sub-label {
-	padding: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .input-container {
-	/* border: 2px solid hotpink; */
-	margin: 0.2rem 0.5rem;
-	/* height: 30rem; */
-	width: 18.5rem;
+  /* border: 2px solid hotpink; */
+  margin: 0.2rem 0.5rem;
+  /* height: 30rem; */
+  width: 18.5rem;
 }
 
 .form-input {
-	background-color: rgb(246, 253, 255);	
-	font-size: 1.2rem;
-	margin: 0.2rem 0;
-	height: 2rem;	
+  background-color: rgb(246, 253, 255);
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+  height: 2rem;
 }
 
 /* ! FANCY ANIMATION SECTION */
 
-.input-mini {	
-	width: 100%;
-	position: relative;
-	height: 5rem;
-	overflow: hidden;
+.input-mini {
+  width: 100%;
+  position: relative;
+  height: 5rem;
+  overflow: hidden;
 }
 
 .input-mini input {
-	width: 100%;
-	height: 100%;
-	/* color: #595f6e; */
-	color: #222;	
-	font-weight: 500;
-	padding: 2rem 0.5rem 0 0.5rem;
-	border: none;
-	outline: none;
+  width: 100%;
+  height: 100%;
+  /* color: #595f6e; */
+  color: #222;
+  font-weight: 500;
+  padding: 2rem 0.5rem 0 0.5rem;
+  border: none;
+  outline: none;
 }
 
 .input-mini label {
-	/* background-color: royalblue; */
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	/* ? lets you click through the label and write into the input: */
-	pointer-events: none;
-	border-bottom: 0.1rem solid #222;
+  /* background-color: royalblue; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* ? lets you click through the label and write into the input: */
+  pointer-events: none;
+  border-bottom: 0.1rem solid #222;
 }
 
 .content-name {
-	color: #333;
+  color: #333;
 }
 
 /* ? after our label we can add additional styles */
 .input-mini label::after {
-	/* ? we could add additional content after our label but we only want additional styles */
-	content: "";
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	/* border-bottom: 0.2rem solid #5fa8d3; */
-	border-bottom: 0.2rem solid #377fd3;
-	
-	left: 0;
-	bottom: -0.1rem;
-	transform: translateX(-100%);
-	transition: transform 0.3s ease;
+  /* ? we could add additional content after our label but we only want additional styles */
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* border-bottom: 0.2rem solid #5fa8d3; */
+  border-bottom: 0.2rem solid #377fd3;
+
+  left: 0;
+  bottom: -0.1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 }
 
 .content-name {
-	font-size: 1.2rem;
-	position: absolute;
-	padding: 0 0.5rem;
-	bottom: 0.5rem;
-	left: 0;
-	transition: all 0.3s ease;
+  font-size: 1.2rem;
+  position: absolute;
+  padding: 0 0.5rem;
+  bottom: 0.5rem;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
 /* ? move the label up, recolor it and make sure it stays up */
 /* ? the input-mini is only valid if we added the required property first */
-.input-mini input:focus + .input-label .content-name, 
+.input-mini input:focus + .input-label .content-name,
 .input-mini input:valid + .input-label .content-name {
-	transform: translateY(-180%);
-	font-size: 1rem;
-	/* color: rgb(56, 139, 194); */
-	color: #377fd3;
+  transform: translateY(-180%);
+  font-size: 1rem;
+  /* color: rgb(56, 139, 194); */
+  color: #377fd3;
 }
 /* * not selector, input required lecserélése*/
 /* ? move the animation line from the left */
-.input-mini input:focus + .input-label::after, 
+.input-mini input:focus + .input-label::after,
 .input-mini input:valid + .input-label::after {
-	transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 /* ! BUTTONS */
 
-.button-container {	
-	position: absolute;
-	bottom: 1rem;
-	width: 100%;
-	padding: 0 1.5rem;
-	height: 3rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
+.button-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 0 1.5rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .basic-btn-container {
-	padding-left: 7rem;
+  padding-left: 7rem;
 }
 
 .btn {
-	background-color: #377fd3;
-	color: rgb(246, 253, 255);
-	padding: 0.5rem;
-	height: 3rem;
-	font-size: 1.1rem;
-	font-weight: 700;
-	border-radius: 0.5rem;
+  background-color: #377fd3;
+  color: rgb(246, 253, 255);
+  padding: 0.5rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
 }
 
 /* ! Test Section */
 
 #testForm {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;		
-	height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
 }
 
 .test-input {
-	background-color: #555;
-	color: #377fd3;
+  background-color: #555;
+  color: #377fd3;
 }
 
-
-
 .test-input::placeholder {
-	color: hotpink;
+  color: hotpink;
+}
+
+#imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#imagePreview {
+  border: #222 solid 2px;
+  /* background-image: url("../../backend/data/profile.jpg"); */
+  /* background-image: url("img/1600_Sky.jpg"); */
+  width: 10rem;
+  height: 10rem;
 }

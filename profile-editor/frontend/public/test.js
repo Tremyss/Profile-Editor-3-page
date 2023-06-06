@@ -57,3 +57,23 @@ window.onload = function () {
             .catch(error => console.log(error))
     });
 }
+
+
+const imageUrl = 'http://127.0.0.1:9000/profile.jpg';
+const imgElement = document.getElementById('imagePreview');
+
+fetch(imageUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch image');
+        }
+        return response.blob();
+    })
+    .then(blob => {
+        const objectURL = URL.createObjectURL(blob);
+        imgElement.src = objectURL;
+    })
+    .catch(error => {
+        console.error('Error fetching image:', error);
+        // Handle the error appropriately, e.g., show a fallback image or display an error message
+    });

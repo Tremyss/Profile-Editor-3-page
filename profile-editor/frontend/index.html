@@ -7,7 +7,7 @@
     <title>Profile editor</title>
 
     <link rel="stylesheet" href="public/style.css" />
-    <script src="public/script.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -208,11 +208,24 @@
         placeholder="Age"
         required
       />
+      <input
+        type="email"
+        class="test-input form-input"
+        name="email"
+        placeholder="e-mail"
+        required
+      />
       <button type="submit" class="btn save-btn">Submit</button>
     </form>
-    <div>
-      <h2>Upload Image</h2>
+    <!-- * Upload Image -->
+    <div id="imageContainer">
+      <img id="imagePreview" src="#" alt="Image Preview" />
+      <input type="file" id="imageUpload" accept="image/*" />
+      <button onclick="uploadImage()" id="imageUploadBtn" class="btn">
+        Upload Image
+      </button>
     </div>
     <!-- ? end of test -->
   </body>
+  <script src="public/script.js"></script>
 </html>

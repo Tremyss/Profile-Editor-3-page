@@ -1,25 +1,4 @@
-// const { log } = require("console");
-
-// const { profile } = require("console");
-
-// todo addeventlistenerrel figyeljük a kattintást. 
-// todo ha megtörténik, kiolvassuk a mezők értékeit, 
-// todo elmentjük egy json fileba
-// todo 
-
-/* let firstNameInput = document.querySelector("#firstName");
-const readFirstName = () => {
-    console.log(firstNameInput.value);
-    let firstNameTyped = firstNameInput.value;
-}
-firstNameInput.addEventListener("input", readFirstName);
- */
-
-/* const FormElement = document.querySelector(".form");
-
-FormElement.addEventListener('submit', (event) => {
-    event.preventDefault();
-}); */
+// ? Collects the form data and saves it on the backend in the profile.json
 
 window.onload = function () {
     const FormE = document.querySelector("#testForm");
@@ -28,15 +7,8 @@ window.onload = function () {
         event.preventDefault();
 
         const formData = new FormData(FormE);
-        // console.log(formData.get('username'));
 
-        /* formData.set('username') // overrides what user wrote
-        formData.delete('username') // delete value
-        formData.append('username') // append smg to formData */
-
-        // todo Lets create a json object out of formData
-        // todo first we create a normal JS object out of all the data
-        // todo then we use fetch API to stringify it to json
+        // todo Lets create a json object out of formData. First we create a normal JS object out of all the data, then we use fetch API to stringify it to json
         const testData = Object.fromEntries(formData)
         console.log(testData);
 
@@ -63,6 +35,67 @@ window.onload = function () {
             .catch(error => console.log(error))
     });
 }
-// * most már elmegy az adat de még el kell menteni profile.json file-ba
+
+// ? saves the uploaded file and store it in the profile.jpg
+
+function uploadImage() {
+    const fileInput = document.getElementById('imageUpload');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        console.log('No file selected');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('profileImage', file);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to upload image');
+            }
+            console.log('Image uploaded successfully');
+            // Perform any necessary actions after successful image upload
+        })
+        .catch(error => {
+            console.error('Error uploading image:', error);
+            // Handle the error appropriately
+        });
+}
+
+
+// ! code above not working
+/* script.js:83     POST http://127.0.0.1:9000/upload 404 (Not Found)
+uploadImage @ script.js:83
+onclick @ (index):217
+script.js:95 Error uploading image: Error: Failed to upload image
+    at script.js:89:23 */
+
+// ? fetches the profile.jpg from the backend and shows it's as a preview
+/* 
+const imageUrl = 'http://127.0.0.1:9000/profile.jpg';
+const imgElement = document.getElementById('imagePreview');
+
+fetch(imageUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch image');
+        }
+        return response.blob();
+    })
+    .then(blob => {
+        const objectURL = URL.createObjectURL(blob);
+        imgElement.src = objectURL;
+    })
+    .catch(error => {
+        console.error('Error fetching image:', error);
+        // Handle the error appropriately, e.g., show a fallback image or display an error message
+    });
+console.log(imgElement);
+ */
 
 
